@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import CookieBanner from './components/common/CookieBanner';
 import BlogArticlePage from './components/pages/BlogArticlePage';
+import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage';
 import { blogPosts } from './components/blogData';
 import BlogPreview from './components/sections/BlogPreview';
 import Header from './components/layout/Header';
@@ -25,9 +26,14 @@ function App() {
   const activeBlogPost = hash.startsWith(blogPrefix)
     ? blogPosts.find((post) => `${blogPrefix}${post.slug}` === hash)
     : null;
+  const isPrivacyPage = hash === '#/privacy-policy';
 
   if (activeBlogPost) {
     return <BlogArticlePage post={activeBlogPost} />;
+  }
+
+  if (isPrivacyPage) {
+    return <PrivacyPolicyPage />;
   }
 
   return (
