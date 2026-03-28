@@ -176,29 +176,40 @@
   display: none;
 }
 
-@keyframes hero-card-rise {
+@keyframes hero-copy-slide {
   from {
     opacity: 0;
-    transform: translateY(56px);
+    transform: translateX(-88px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@media (min-width: 769px) {
-  .hero__card--primary,
-  .hero__card--secondary {
+@keyframes hero-visual-slide {
+  from {
     opacity: 0;
-    transform: translate3d(0, 120px, 0) scale(0.96);
-    animation: hero-card-rise 1200ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    transform: translateX(88px);
   }
 
-  .hero__card--secondary {
-    animation-delay: 260ms;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+
+.hero__content {
+  opacity: 0;
+  transform: translateX(-88px);
+  animation: hero-copy-slide 1700ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.hero__visual {
+  opacity: 0;
+  transform: translateX(88px);
+  animation: hero-visual-slide 1800ms cubic-bezier(0.2, 0.8, 0.2, 1) 140ms forwards;
 }
 
 @media (max-width: 1080px) {
@@ -220,6 +231,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 18px;
+    animation-duration: 1900ms;
   }
 
   .hero__card {
@@ -249,6 +261,7 @@
     gap: 10px;
     align-items: center;
     text-align: center;
+    animation-duration: 1900ms;
   }
 
   .hero__eyebrow {
@@ -273,6 +286,7 @@
   .hero__visual {
     display: block;
     min-height: 0;
+    animation-duration: 2000ms;
   }
 
   .hero__card {

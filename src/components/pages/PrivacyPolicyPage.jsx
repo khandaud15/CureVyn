@@ -4,7 +4,7 @@ function PrivacyPolicyPage() {
   return (
     <main className="privacy-policy-page">
       <div className="privacy-policy-page__inner">
-        <a className="privacy-policy-page__back" href="#home">
+        <a className="privacy-policy-page__back" href="/">
           Back to Home
         </a>
 

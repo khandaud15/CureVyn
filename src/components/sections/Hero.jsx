@@ -37,10 +37,10 @@ function Hero() {
           </p>
 
           <div className="hero__actions">
-            <a className="hero__primary" href="#products">
+            <a className="hero__primary" href="/#products">
               Explore Products
             </a>
-            <a className="hero__secondary" href="#contact">
+            <a className="hero__secondary" href="/contact-us">
               Contact Us
             </a>
           </div>

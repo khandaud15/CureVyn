@@ -3,11 +3,11 @@ import logo from '../../../Images/CureVyn-Logo2.jpeg';
 import './header.css';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Products +', href: '#products' },
-  { label: 'Contact Us', href: '#contact' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Products +', href: '/#products' },
+  { label: 'Contact Us', href: '/contact-us' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
   return (
     <header className="header" id="home">
       <div className="header__main">
-        <a className="header__brand" href="#home" aria-label="CureVyn home">
+        <a className="header__brand" href="/" aria-label="CureVyn home">
           <img className="header__logo" src={logo} alt="CureVyn logo" />
         </a>
 
@@ -54,7 +54,7 @@ function Header() {
               Info@curevyn.com
             </a>
 
-            <a className="header__brochure" href="#brochure">
+            <a className="header__brochure" href="/#brochure">
               Download Brochure
             </a>
           </div>
@@ -63,7 +63,7 @@ function Header() {
             <a className="header__email" href="mailto:Info@curevyn.com">
               Info@curevyn.com
             </a>
-            <a className="header__brochure" href="#brochure">
+            <a className="header__brochure" href="/#brochure">
               Download Brochure
             </a>
           </div>

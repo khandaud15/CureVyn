@@ -7,7 +7,7 @@ function BlogArticlePage({ post }) {
   return (
     <main className="blog-article-page">
       <div className="blog-article-page__inner">
-        <a className="blog-article-page__back" href="#home">
+        <a className="blog-article-page__back" href="/">
           Back to Home
         </a>
 

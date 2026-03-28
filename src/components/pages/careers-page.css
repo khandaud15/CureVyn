@@ -1,0 +1,72 @@
+.careers-page {
+  min-height: 100vh;
+  padding: 148px 0 88px;
+  background: #ffffff;
+}
+
+.careers-page__inner {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.careers-page__back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: rgba(10, 95, 91, 0.08);
+  color: #0a5f5b;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.careers-page__hero {
+  margin-top: 28px;
+}
+
+@media (min-width: 641px) {
+  .careers-page__hero {
+    margin-top: -12px;
+  }
+}
+
+.careers-page__hero-media {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.careers-page__hero-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: 620px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 641px) {
+  .careers-page__back {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-page {
+    padding: 116px 0 56px;
+  }
+
+  .careers-page__hero-media {
+    border-radius: 20px;
+  }
+
+  .careers-page__hero-image {
+    max-height: 240px;
+  }
+}

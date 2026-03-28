@@ -3,7 +3,7 @@ import './cookie-banner.css';
 
 const STORAGE_KEY = 'curevyn-cookie-consent-v4';
 const PREFERENCES_KEY = 'curevyn-cookie-preferences-v3';
-const FORCE_SHOW_BANNER = true;
+const FORCE_SHOW_BANNER = false;
 
 const defaultPreferences = {
   necessary: true,
@@ -119,7 +119,7 @@ function CookieBanner() {
             consent.
           </p>
           <div className="cookie-banner__links">
-            <a className="cookie-banner__link" href="#/privacy-policy">
+            <a className="cookie-banner__link" href="/privacy-policy">
               Read More
             </a>
             <button

@@ -2,17 +2,17 @@ import logo from '../../../Images/CureVyn-Logo2.jpeg';
 import './footer.css';
 
 const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Career', href: '#career' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Career', href: '/careers' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 const productLinks = [
-  { label: 'Third Party Product', href: '#products' },
-  { label: 'PCD Product', href: '#products' },
-  { label: 'Export Product', href: '#products' },
+  { label: 'Third Party Product', href: '/#products' },
+  { label: 'PCD Product', href: '/#products' },
+  { label: 'Export Product', href: '/#products' },
 ];
 
 function BuildingIcon() {
@@ -75,10 +75,10 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer">
       <div className="footer__inner">
         <div className="footer__column footer__column--brand">
-          <a className="footer__brand" href="#home" aria-label="CureVyn home">
+          <a className="footer__brand" href="/" aria-label="CureVyn home">
             <img className="footer__logo" src={logo} alt="CureVyn logo" />
           </a>
           <p className="footer__tagline">

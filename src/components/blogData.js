@@ -4,6 +4,7 @@ import blog2Image from '../../Images/Blog2.png';
 export const blogPosts = [
   {
     slug: 'building-trust-in-modern-healthcare',
+    date: 'February 10, 2026',
     title: 'Building Trust in Modern Healthcare',
     subtitle: 'Building Trust Through Quality and Care',
     summary:
@@ -20,6 +21,7 @@ export const blogPosts = [
   },
   {
     slug: 'why-quality-matters-in-pharmaceuticals',
+    date: 'March 22, 2026',
     title: 'Why Quality Matters in Pharmaceuticals',
     subtitle: 'Why Quality Matters in Every Pharmaceutical Product',
     summary:

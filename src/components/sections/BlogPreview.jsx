@@ -36,7 +36,7 @@ function BlogPreview() {
             </p>
             <a
               className="blog-preview__link"
-              href={`#/blog/${activePost.slug}`}
+              href={`/blog/${activePost.slug}`}
             >
               Read Article
             </a>
