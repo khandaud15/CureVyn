@@ -8,7 +8,7 @@ export const blogPosts = [
     title: 'Building Trust in Modern Healthcare',
     subtitle: 'Building Trust Through Quality and Care',
     summary:
-      'Explore how CureVyn Pharmaceuticals approaches quality, consistency, and responsible healthcare delivery.',
+      'Explore how CureVyn Pharmaceuticals approaches quality, consistency, and responsible healthcare delivery. At CureVyn Pharmaceuticals, healthcare is seen as more than just medicine.',
     image: blog1Image,
     alt: 'Building Trust in Modern Healthcare',
     paragraphs: [
@@ -25,7 +25,7 @@ export const blogPosts = [
     title: 'Why Quality Matters in Pharmaceuticals',
     subtitle: 'Why Quality Matters in Every Pharmaceutical Product',
     summary:
-      'See why quality, precision, and consistency remain central to every pharmaceutical product and patient experience.',
+      'See why quality, precision, and consistency remain central to every pharmaceutical product and patient experience. In the pharmaceutical industry, quality is not an optional feature.',
     image: blog2Image,
     alt: 'Why Quality Matters in Pharmaceuticals',
     paragraphs: [
