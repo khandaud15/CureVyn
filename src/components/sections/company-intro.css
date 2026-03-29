@@ -7,10 +7,7 @@
   width: 100%;
   margin-bottom: 34px;
   padding: 0;
-  background:
-    radial-gradient(circle at 14% 24%, rgba(29, 187, 123, 0.1), transparent 26%),
-    radial-gradient(circle at 86% 18%, rgba(27, 111, 216, 0.08), transparent 30%),
-    linear-gradient(90deg, #f7faf7 0%, #f3f7f4 42%, #f4f7fa 100%);
+  background: #ffffff;
 }
 
 .company-intro__inner {
