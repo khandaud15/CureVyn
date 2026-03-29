@@ -35,10 +35,13 @@
   align-items: stretch;
   min-height: 460px;
   padding: 28px 30px;
-  border: 1px solid rgba(11, 49, 68, 0.08);
+  border: 1px solid rgba(18, 103, 112, 0.12);
   border-radius: 28px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbfc 100%);
-  box-shadow: 0 20px 48px rgba(11, 49, 68, 0.08);
+  background:
+    radial-gradient(circle at 12% 16%, rgba(27, 111, 216, 0.08), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(29, 187, 123, 0.1), transparent 30%),
+    linear-gradient(135deg, #fbfeff 0%, #f3fbfa 52%, #f6fcff 100%);
+  box-shadow: 0 24px 54px rgba(11, 49, 68, 0.1);
 }
 
 .blog-preview__stage {
