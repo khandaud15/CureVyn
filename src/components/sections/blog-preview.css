@@ -121,6 +121,7 @@
   justify-content: center;
   width: fit-content;
   min-height: 44px;
+  margin-top: 10px;
   padding: 0 18px;
   border-radius: 999px;
   background: #0a5f5b;
@@ -254,6 +255,7 @@
 
   .blog-preview__link {
     min-height: 42px;
+    margin-top: 0;
     padding: 0 16px;
     font-size: 0.74rem;
   }
