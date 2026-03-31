@@ -2,12 +2,66 @@ import { useState } from 'react';
 import contactVisual from '../../../Images/Contact.png';
 import './contact-page.css';
 
-function ContactPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const INITIAL_FORM = {
+  name: '',
+  organization: '',
+  phone: '',
+  email: '',
+  country: '',
+  subject: '',
+  message: '',
+  consent: false,
+};
 
-  const handleSubmit = (event) => {
+function ContactPage() {
+  const [formData, setFormData] = useState(INITIAL_FORM);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+
+    setFormData((current) => ({
+      ...current,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          organization: formData.organization,
+          phone: formData.phone,
+          email: formData.email,
+          country: formData.country,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
+      setIsSubmitted(true);
+      setFormData(INITIAL_FORM);
+    } catch (error) {
+      setIsSubmitted(false);
+      setSubmitError('Unable to send your query right now. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,31 +120,64 @@ function ContactPage() {
               <div className="contact-page__field-grid">
                 <label className="contact-page__field">
                   <span>Name</span>
-                  <input type="text" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </label>
 
                 <label className="contact-page__field">
                   <span>Organization</span>
-                  <input type="text" placeholder="Organization" required />
+                  <input
+                    type="text"
+                    name="organization"
+                    placeholder="Organization"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    required
+                  />
                 </label>
               </div>
 
               <div className="contact-page__field-grid">
                 <label className="contact-page__field">
                   <span>Phone</span>
-                  <input type="tel" placeholder="Phone" required />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
                 </label>
 
                 <label className="contact-page__field">
                   <span>Email</span>
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </label>
               </div>
 
               <div className="contact-page__field-grid">
                 <label className="contact-page__field">
                   <span>Country</span>
-                  <select defaultValue="" required>
+                  <select
+                    name="country"
+                    value={formData.country}
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="" disabled>
                       Select country *
                     </option>
@@ -124,7 +211,12 @@ function ContactPage() {
 
                 <label className="contact-page__field">
                   <span>Subject</span>
-                  <select defaultValue="" required>
+                  <select
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="" disabled>
                       Select subject *
                     </option>
@@ -142,25 +234,42 @@ function ContactPage() {
 
               <label className="contact-page__field">
                 <span>Message</span>
-                <textarea rows="6" placeholder="Write your query here" required />
+                <textarea
+                  rows="6"
+                  name="message"
+                  placeholder="Write your query here"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
               </label>
 
               <label className="contact-page__consent">
-                <input type="checkbox" required />
+                <input
+                  type="checkbox"
+                  name="consent"
+                  checked={formData.consent}
+                  onChange={handleChange}
+                  required
+                />
                 <span>
                   I agree and accept the <a href="/privacy-policy">Privacy Policy</a> and the{' '}
                   Terms of use of this website *
                 </span>
               </label>
 
-              <button className="contact-page__submit" type="submit">
-                Submit Query
+              <button className="contact-page__submit" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Submit Query'}
               </button>
 
               {isSubmitted ? (
                 <p className="contact-page__success">
-                  Your query has been noted. Our team will connect with you shortly.
+                  Your query has been sent successfully. Our team will connect with you shortly.
                 </p>
+              ) : null}
+
+              {submitError ? (
+                <p className="contact-page__error">{submitError}</p>
               ) : null}
             </form>
           </div>
