@@ -23,14 +23,6 @@ function BuildingIcon() {
   );
 }
 
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.36 2.26.55 3.46.55a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.36.55 3.46a1 1 0 0 1-.25 1l-2.2 2.34Z" />
-    </svg>
-  );
-}
-
 function MailIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -121,15 +113,6 @@ function Footer() {
                 211011
               </p>
             </div>
-            <a className="footer__contact-row footer__contact-link" href="tel:+919451517351">
-              <span className="footer__icon">
-                <PhoneIcon />
-              </span>
-              <span className="footer__contact-stack">
-                <span className="footer__link-text">Mohd Shadab Khan</span>
-                <span className="footer__subtext">+91 9451517351</span>
-              </span>
-            </a>
             <a className="footer__contact-row footer__contact-link" href="mailto:Info@Curevyn.com">
               <span className="footer__icon">
                 <MailIcon />
