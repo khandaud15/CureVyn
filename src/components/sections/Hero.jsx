@@ -5,6 +5,8 @@ import './hero.css';
 
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [primaryLoaded, setPrimaryLoaded] = useState(false);
+  const [secondaryLoaded, setSecondaryLoaded] = useState(false);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
@@ -12,6 +14,25 @@ function Hero() {
     }, 5000);
 
     return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const primaryImage = new Image();
+    const secondaryImage = new Image();
+
+    primaryImage.src = heroPrimary;
+    secondaryImage.src = heroSecondary;
+
+    primaryImage.onload = () => setPrimaryLoaded(true);
+    secondaryImage.onload = () => setSecondaryLoaded(true);
+
+    if (primaryImage.complete) {
+      setPrimaryLoaded(true);
+    }
+
+    if (secondaryImage.complete) {
+      setSecondaryLoaded(true);
+    }
   }, []);
 
   return (
@@ -49,17 +70,33 @@ function Hero() {
         <div className="hero__visual">
           <div
             className={`hero__card hero__card--primary ${
+              primaryLoaded ? 'hero__card--loaded' : ''
+            } ${
               activeSlide === 0 ? 'hero__card--mobile-active' : ''
             }`}
           >
-            <img src={heroPrimary} alt="CureVyn healthcare presentation" />
+            <img
+              src={heroPrimary}
+              alt="CureVyn healthcare presentation"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <div
             className={`hero__card hero__card--secondary ${
+              secondaryLoaded ? 'hero__card--loaded' : ''
+            } ${
               activeSlide === 1 ? 'hero__card--mobile-active' : ''
             }`}
           >
-            <img src={heroSecondary} alt="CureVyn pharmaceutical product visual" />
+            <img
+              src={heroSecondary}
+              alt="CureVyn pharmaceutical product visual"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
           <div className="hero__mobile-dots" aria-hidden="true">
             <span
