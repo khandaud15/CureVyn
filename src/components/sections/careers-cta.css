@@ -1,0 +1,114 @@
+.careers-cta {
+  padding: 0 0 88px;
+  background: #ffffff;
+}
+
+.careers-cta__inner {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.careers-cta__content {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.careers-cta__eyebrow {
+  margin: 0;
+  color: #0f8a82;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.careers-cta__title {
+  margin: 0;
+  color: #06202d;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.careers-cta__text {
+  margin: 0;
+  max-width: 58ch;
+  color: rgba(8, 36, 54, 0.74);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.careers-cta__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 48px;
+  margin-top: 4px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: #0a5f5b;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.careers-cta__visual {
+  display: block;
+  overflow: hidden;
+  border-radius: 26px;
+  text-decoration: none;
+  box-shadow: 0 24px 52px rgba(8, 53, 77, 0.12);
+}
+
+.careers-cta__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .careers-cta__inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .careers-cta__content {
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-cta {
+    padding: 0 0 64px;
+  }
+
+  .careers-cta__inner {
+    gap: 18px;
+  }
+
+  .careers-cta__visual {
+    border-radius: 18px;
+  }
+
+  .careers-cta__title {
+    font-size: 1.8rem;
+  }
+
+  .careers-cta__text {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+}

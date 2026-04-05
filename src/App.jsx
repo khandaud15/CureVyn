@@ -7,6 +7,7 @@ import ContactPage from './components/pages/ContactPage';
 import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage';
 import { blogPosts } from './components/blogData';
 import BlogPreview from './components/sections/BlogPreview';
+import CareersCta from './components/sections/CareersCta';
 import Header from './components/layout/Header';
 import CompanyIntro from './components/sections/CompanyIntro';
 import Footer from './components/sections/Footer';
@@ -129,6 +130,7 @@ function App() {
       <Products />
       <Nutraceuticals />
       <BlogPreview />
+      <CareersCta />
       <Footer />
       <CookieBanner />
     </div>
