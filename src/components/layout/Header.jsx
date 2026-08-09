@@ -14,10 +14,10 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="header" id="home">
+    <header className={`header ${isMenuOpen ? 'header--menu-open' : ''}`} id="home">
       <div className="header__main">
         <a className="header__brand" href="/" aria-label="CureVyn home">
-          <BrandLogo />
+          <BrandLogo inverse={isMenuOpen} />
         </a>
 
         <button
@@ -36,6 +36,11 @@ function Header() {
           className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}
           aria-label="Primary navigation"
         >
+          <div className="header__mobile-intro">
+            <p>Care, made considered.</p>
+            <span>Quality healthcare for everyday life.</span>
+          </div>
+
           <div className="header__nav-group">
             {navItems.map((item) => (
               <a
@@ -60,6 +65,7 @@ function Header() {
           </div>
 
           <div className="header__mobile-actions">
+            <p className="header__mobile-actions-label">Connect with CureVyn</p>
             <a className="header__email" href="mailto:Info@curevyn.com">
               Info@curevyn.com
             </a>

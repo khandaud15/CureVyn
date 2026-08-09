@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import contactVisual from '../../../Images/Contact.png';
+import contactVisual from '../../../Images/CureVyn-Contact-Partnership.png';
+import contactQualityVisual from '../../../Images/CureVyn-Contact-Quality.png';
 import './contact-page.css';
 
 const INITIAL_FORM = {
@@ -72,23 +73,30 @@ function ContactPage() {
         </a>
 
         <section className="contact-page__hero">
+          <div className="contact-page__hero-copy">
+            <p className="contact-page__eyebrow">Contact CureVyn</p>
+            <h1 className="contact-page__title">
+              Connect with <span className="contact-page__brand-name"><span>Cure</span><span>Vyn</span></span>.
+            </h1>
+            <p className="contact-page__lead">
+              For product, distribution, business, or partnership enquiries,
+              our <span className="contact-page__brand-name"><span>Cure</span><span>Vyn</span></span> team will direct your message to the right people.
+            </p>
+          </div>
           <div className="contact-page__hero-media">
             <img
               className="contact-page__hero-image"
               src={contactVisual}
-              alt="Contact CureVyn"
+              alt="CureVyn professionals in conversation in a modern laboratory meeting space"
             />
           </div>
-          <h1 className="contact-page__title">Get In Touch</h1>
-          <p className="contact-page__lead">
-            Reach out for product inquiries, distribution discussions, general
-            business communication, or support requests. Our team will connect
-            with you as quickly as possible.
-          </p>
         </section>
 
         <section className="contact-page__email-showcase">
-          <p className="contact-page__showcase-title">Write to us</p>
+          <div className="contact-page__showcase-heading">
+            <p className="contact-page__eyebrow">Direct contacts</p>
+            <h2 className="contact-page__showcase-title">Speak to the right team.</h2>
+          </div>
           <div className="contact-page__email-grid">
             <article className="contact-page__email-card">
               <h2 className="contact-page__email-heading">Enquiries</h2>
@@ -113,9 +121,21 @@ function ContactPage() {
           </div>
         </section>
 
-        <section className="contact-page__layout">
+        <section className="contact-page__layout" id="send-query">
+          <aside className="contact-page__form-aside">
+            <p className="contact-page__eyebrow">Enquiry form</p>
+            <h2>Start a conversation with <span className="contact-page__brand-name"><span>Cure</span><span>Vyn</span></span>.</h2>
+            <p>Share a few details below and the right team will review your enquiry.</p>
+            <div className="contact-page__aside-media">
+              <img src={contactQualityVisual} alt="Pharmaceutical quality vials in a modern laboratory" />
+            </div>
+            <div className="contact-page__aside-note">
+              <span aria-hidden="true">•</span>
+              <span>Product, partnership, and business enquiries are welcome.</span>
+            </div>
+          </aside>
           <div className="contact-page__panel">
-            <h2 className="contact-page__panel-title">Send a Query</h2>
+            <h2 className="contact-page__panel-title">Send an enquiry</h2>
             <form className="contact-page__form" onSubmit={handleSubmit}>
               <div className="contact-page__field-grid">
                 <label className="contact-page__field">
