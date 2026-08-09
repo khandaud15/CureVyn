@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import contactVisual from '../../../Images/CureVyn-Contact-Partnership.png';
 import contactQualityVisual from '../../../Images/CureVyn-Contact-Quality.png';
+import BrandLogo from '../layout/BrandLogo';
 import './contact-page.css';
 
 const INITIAL_FORM = {
@@ -128,6 +129,10 @@ function ContactPage() {
             <p>Share a few details below and the right team will review your enquiry.</p>
             <div className="contact-page__aside-media">
               <img src={contactQualityVisual} alt="Pharmaceutical quality vials in a modern laboratory" />
+              <div className="contact-page__aside-brand">
+                <BrandLogo inverse />
+                <span>Quality-led conversations</span>
+              </div>
             </div>
             <div className="contact-page__aside-note">
               <span aria-hidden="true">•</span>
