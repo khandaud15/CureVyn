@@ -1,4 +1,4 @@
-import logo from '../../../Images/CureVyn-Logo2.jpeg';
+import BrandLogo from '../layout/BrandLogo';
 import './footer.css';
 
 const quickLinks = [
@@ -71,7 +71,7 @@ function Footer() {
       <div className="footer__inner">
         <div className="footer__column footer__column--brand">
           <a className="footer__brand" href="/" aria-label="CureVyn home">
-            <img className="footer__logo" src={logo} alt="CureVyn logo" />
+            <BrandLogo inverse />
           </a>
           <p className="footer__tagline">
             Trusted formulations, reliable healthcare support, and a stronger

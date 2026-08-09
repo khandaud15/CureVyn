@@ -13,6 +13,7 @@ import CompanyIntro from './components/sections/CompanyIntro';
 import Footer from './components/sections/Footer';
 import Hero from './components/sections/Hero';
 import Nutraceuticals from './components/sections/Nutraceuticals';
+import PortfolioOfCare from './components/sections/PortfolioOfCare';
 import Products from './components/sections/Products';
 
 function App() {
@@ -127,6 +128,7 @@ function App() {
       <Header />
       <Hero />
       <CompanyIntro />
+      <PortfolioOfCare />
       <Products />
       <Nutraceuticals />
       <BlogPreview />

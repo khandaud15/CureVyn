@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../../../Images/CureVyn-Logo2.jpeg';
+import BrandLogo from './BrandLogo';
 import './header.css';
 
 const navItems = [
@@ -17,7 +17,7 @@ function Header() {
     <header className="header" id="home">
       <div className="header__main">
         <a className="header__brand" href="/" aria-label="CureVyn home">
-          <img className="header__logo" src={logo} alt="CureVyn logo" />
+          <BrandLogo />
         </a>
 
         <button

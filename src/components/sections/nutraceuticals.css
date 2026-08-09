@@ -4,7 +4,7 @@
 .nutraceuticals__eyebrow { margin: 0 0 14px; color: #6e7f63; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
 .nutraceuticals__title { margin: 0; color: #263b42; font-family: var(--font-editorial); font-size: clamp(2.5rem, 4vw, 3.65rem); font-weight: 500; letter-spacing: -0.05em; line-height: 1; }
 .nutraceuticals__title::after { content: ''; display: block; width: 42px; height: 2px; margin: 22px auto; background: #9c9070; }
-.nutraceuticals__lead { margin: 0; color: #65706f; font-size: 1rem; line-height: 1.8; }
+.nutraceuticals__lead { margin: 0; color: #475653; font-size: 1rem; font-weight: 500; line-height: 1.8; }
 .nutraceuticals__stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
 .nutraceuticals__feature { display: grid; grid-template-columns: 1fr; min-height: 0; overflow: hidden; border: 1px solid rgba(38, 59, 66, 0.11); border-radius: 3px; background: #fff; box-shadow: 0 14px 34px rgba(27, 43, 45, 0.06); }
 .nutraceuticals__feature--reverse { grid-template-columns: 1fr; }
@@ -22,7 +22,7 @@
 .nutraceuticals__category { width: fit-content; margin: 0; color: #78856b; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
 .nutraceuticals__name { margin: 0; color: #263b42; font-family: var(--font-editorial); font-size: 2.35rem; font-weight: 500; letter-spacing: -0.05em; line-height: 0.98; }
 .nutraceuticals__summary { margin: 0; color: #3d5052; font-size: 1rem; font-weight: 600; line-height: 1.63; }
-.nutraceuticals__body { margin: 0; color: #727a77; font-size: 0.89rem; line-height: 1.75; }
+.nutraceuticals__body { margin: 0; color: #4f5c59; font-size: 0.89rem; font-weight: 500; line-height: 1.75; }
 .nutraceuticals__points { display: grid; gap: 7px; margin-top: 4px; padding-top: 16px; border-top: 1px solid rgba(38, 59, 66, 0.11); }
 .nutraceuticals__point { display: flex; align-items: center; gap: 9px; color: #52625d; font-size: 0.79rem; font-weight: 650; line-height: 1.4; }
 .nutraceuticals__point-dot { width: 5px; height: 5px; border-radius: 50%; background: #9c9070; flex: 0 0 auto; }

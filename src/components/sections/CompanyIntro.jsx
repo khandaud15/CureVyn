@@ -1,4 +1,4 @@
-import companyDescriptionImage from '../../../Images/company_des.jpg';
+import companyDescriptionImage from '../../../Images/CureVyn-About-Lab.png';
 import './company-intro.css';
 
 function CompanyIntro() {
@@ -23,7 +23,7 @@ function CompanyIntro() {
             <img
               className="company-intro__image"
               src={companyDescriptionImage}
-              alt="CureVyn company description"
+              alt="CureVyn research team collaborating in a modern laboratory"
             />
           </div>
 

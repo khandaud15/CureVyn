@@ -36,6 +36,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: var(--font-body);
+  color: #263b42;
+  font-weight: 450;
 }
 
 a,
@@ -60,3 +62,52 @@ img {
 .site-shell {
   min-height: 100vh;
 }
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #263b42;
+}
+
+.brand-logo__mark {
+  width: 36px;
+  height: 36px;
+  overflow: visible;
+  fill: #263b42;
+}
+
+.brand-logo__leaf {
+  fill: none;
+  stroke: #d8c69b;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.35px;
+}
+
+.brand-logo__type {
+  display: grid;
+  gap: 0;
+  font-family: var(--font-body);
+  font-size: 1.42rem;
+  font-weight: 750;
+  letter-spacing: -0.075em;
+  line-height: 0.88;
+}
+
+.brand-logo__type > span > span { color: #657c70; }
+
+.brand-logo__type small {
+  margin-top: 5px;
+  color: #78817d;
+  font-size: 0.42rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.brand-logo--inverse { color: #f7f4ee; }
+.brand-logo--inverse .brand-logo__mark { fill: #f7f4ee; }
+.brand-logo--inverse .brand-logo__leaf { stroke: #d8c69b; }
+.brand-logo--inverse .brand-logo__type > span > span { color: #d8c69b; }
+.brand-logo--inverse .brand-logo__type small { color: rgba(247, 244, 238, 0.58); }

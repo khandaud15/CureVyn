@@ -76,6 +76,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 3px;
+  aspect-ratio: 1.08 / 1;
   box-shadow: 0 26px 54px rgba(13, 53, 71, 0.12);
 }
 
@@ -90,7 +91,9 @@
 .company-intro__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 64% center;
 }
 
 .company-intro__copy {
@@ -102,7 +105,7 @@
 
 .company-intro__text {
   margin: 0;
-  color: rgba(16, 44, 62, 0.74);
+  color: #425154;
   max-width: 62ch;
   font-size: 1rem;
   font-weight: 450;
@@ -136,7 +139,7 @@
 }
 
 .company-intro__principles span {
-  color: #637985;
+  color: #52605c;
   font-size: 0.78rem;
   font-weight: 650;
 }
