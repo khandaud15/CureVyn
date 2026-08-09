@@ -1,4 +1,5 @@
-import careerVisual from '../../../Images/career.png';
+import careerVisual from '../../../Images/CureVyn-Careers-Team.png';
+import BrandLogo from '../layout/BrandLogo';
 import './careers-cta.css';
 
 function CareersCta() {
@@ -24,6 +25,7 @@ function CareersCta() {
             src={careerVisual}
             alt="Careers at CureVyn"
           />
+          <span className="careers-cta__brand"><BrandLogo inverse /></span>
         </a>
       </div>
     </section>

@@ -65,6 +65,7 @@
 }
 
 .careers-cta__visual {
+  position: relative;
   display: block;
   overflow: hidden;
   border-radius: 26px;
@@ -77,6 +78,9 @@
   width: 100%;
   height: auto;
 }
+
+.careers-cta__brand { position: absolute; top: 22px; left: 22px; }
+.careers-cta__brand .brand-logo { transform: scale(.76); transform-origin: left center; margin-right: -32px; }
 
 @media (max-width: 900px) {
   .careers-cta__inner {

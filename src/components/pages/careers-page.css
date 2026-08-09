@@ -1,8 +1,4 @@
-.careers-page {
-  min-height: 100vh;
-  padding: 148px 0 88px;
-  background: #ffffff;
-}
+.careers-page { min-height: 100vh; padding: 58px 0 88px; background: #f7f6f2; }
 
 .careers-page__inner {
   width: min(1200px, calc(100% - 32px));
@@ -25,31 +21,10 @@
   text-transform: uppercase;
 }
 
-.careers-page__hero {
-  margin-top: 28px;
-}
-
-@media (min-width: 641px) {
-  .careers-page__hero {
-    margin-top: -12px;
-  }
-}
-
-.careers-page__hero-media {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 28px;
-}
-
-.careers-page__hero-image {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  max-height: 620px;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
+.careers-page__hero { margin: 0; }
+.careers-page__hero-media { position: relative; width: 100%; min-height: min(610px, calc(100vh - 180px)); overflow: hidden; border-radius: 3px; background: #263b42; box-shadow: 0 26px 60px rgba(26,40,41,.15); }
+.careers-page__hero-image { display: block; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center; }
+.careers-page__hero-overlay { position: absolute; z-index: 1; top: 0; bottom: 0; left: 0; display: flex; flex-direction: column; justify-content: center; width: min(42%, 480px); padding: 58px; background: linear-gradient(90deg, rgba(22,31,33,.93) 0%, rgba(22,31,33,.75) 72%, transparent 100%); }.careers-page__hero-overlay .brand-logo { margin-bottom: auto; }.careers-page__hero-overlay p { margin: auto 0 11px; color: #f7f4ee; font-family: var(--font-editorial); font-size: clamp(3rem, 5vw, 5rem); font-weight: 500; letter-spacing: -.065em; line-height: .91; }.careers-page__hero-overlay > span { color: #d8c69b; font-size: .72rem; font-weight: 800; letter-spacing: .11em; line-height: 1.5; text-transform: uppercase; }
 
 @media (min-width: 641px) {
   .careers-page__back {
@@ -58,15 +33,5 @@
 }
 
 @media (max-width: 640px) {
-  .careers-page {
-    padding: 116px 0 56px;
-  }
-
-  .careers-page__hero-media {
-    border-radius: 20px;
-  }
-
-  .careers-page__hero-image {
-    max-height: 240px;
-  }
+  .careers-page { padding: 28px 0 56px; }.careers-page__hero-media { min-height: 560px; }.careers-page__hero-overlay { width: 100%; padding: 30px; background: linear-gradient(180deg, rgba(22,31,33,.8) 0%, rgba(22,31,33,.2) 65%, rgba(22,31,33,.25) 100%); }.careers-page__hero-overlay p { margin: auto 0 9px; font-size: 3.4rem; }.careers-page__hero-overlay .brand-logo { margin-bottom: 0; }
 }
