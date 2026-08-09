@@ -39,7 +39,15 @@ function Products() {
   return (
     <section className="products" id="products">
       <div className="products__inner">
-        <h2 className="products__title">Our Products</h2>
+        <div className="products__heading">
+          <div>
+            <p className="products__eyebrow">Our portfolio</p>
+            <h2 className="products__title">Purposeful formulations.<br />Thoughtfully presented.</h2>
+          </div>
+          <p className="products__lead">
+            Discover a focused range created for today&apos;s healthcare needs and presented with the clarity your market deserves.
+          </p>
+        </div>
         <div className="products__grid">
           {products.map((product) => (
             <article

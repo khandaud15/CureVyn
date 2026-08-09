@@ -6,6 +6,7 @@ function CompanyIntro() {
     <section className="company-intro" id="about">
       <div className="company-intro__title-band">
         <div className="company-intro__inner">
+          <p className="company-intro__eyebrow">About CureVyn</p>
           <h2 className="company-intro__title">
             <span className="company-intro__brand">
               <span className="company-intro__brand-cure">Cure</span>
@@ -27,6 +28,7 @@ function CompanyIntro() {
           </div>
 
           <div className="company-intro__copy">
+            <p className="company-intro__overline">The CureVyn commitment</p>
             <p className="company-intro__text company-intro__text--desktop">
               CureVyn Pharmaceutical Pvt. Ltd is a quality-focused pharmaceutical
               brand delivering market-relevant healthcare products across India
@@ -56,6 +58,11 @@ function CompanyIntro() {
               and strong brand vision to bring premium pharmaceutical and
               nutraceutical solutions to market with consistency and value.
             </p>
+
+            <div className="company-intro__principles" aria-label="Our principles">
+              <div><strong>Quality</strong><span>Built into every decision</span></div>
+              <div><strong>Integrity</strong><span>Trusted partnerships, always</span></div>
+            </div>
           </div>
         </div>
       </div>

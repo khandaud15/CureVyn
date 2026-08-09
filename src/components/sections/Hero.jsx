@@ -1,60 +1,23 @@
-import { useEffect, useState } from 'react';
-import heroPrimary from '../../../Images/CureVyn-Hero-1.png';
-import heroSecondary from '../../../Images/CureVyn-Hero-2.png';
+import researchHero from '../../../Images/CureVyn-Research-Hero.png';
 import './hero.css';
 
 function Hero() {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [primaryLoaded, setPrimaryLoaded] = useState(false);
-  const [secondaryLoaded, setSecondaryLoaded] = useState(false);
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % 2);
-    }, 5000);
-
-    return () => window.clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    const primaryImage = new Image();
-    const secondaryImage = new Image();
-
-    primaryImage.src = heroPrimary;
-    secondaryImage.src = heroSecondary;
-
-    primaryImage.onload = () => setPrimaryLoaded(true);
-    secondaryImage.onload = () => setSecondaryLoaded(true);
-
-    if (primaryImage.complete) {
-      setPrimaryLoaded(true);
-    }
-
-    if (secondaryImage.complete) {
-      setSecondaryLoaded(true);
-    }
-  }, []);
-
   return (
     <section className="hero" id="hero">
       <div className="hero__inner">
         <div className="hero__content">
           <p className="hero__eyebrow">Trusted Pharmaceutical Innovation</p>
           <h1 className="hero__title">
-            Advancing healthier lives with dependable{' '}
-            <span className="hero__brand-wordmark">
-              <span className="hero__brand-wordmark-cure">Cure</span>
-              <span className="hero__brand-wordmark-vyn">Vyn</span>
-            </span>{' '}
-            formulations.
+            Healthcare, held to a higher standard.
           </h1>
           <p className="hero__text">
+            At{' '}
             <span className="hero__brand-wordmark">
               <span className="hero__brand-wordmark-cure">Cure</span>
               <span className="hero__brand-wordmark-vyn">Vyn</span>
             </span>{' '}
-            delivers patient-focused pharmaceutical products with a strong
-            emphasis on quality, consistency, and modern healthcare support.
+            we shape dependable pharmaceutical and nutraceutical solutions with
+            a disciplined focus on quality, consistency, and care.
           </p>
 
           <div className="hero__actions">
@@ -62,53 +25,40 @@ function Hero() {
               Explore Products
             </a>
             <a className="hero__secondary" href="/contact-us">
-              Contact Us
+              Partner with us
             </a>
+          </div>
+
+          <div className="hero__assurances" aria-label="CureVyn commitments">
+            <div className="hero__assurance">
+              <span className="hero__assurance-mark" aria-hidden="true">✓</span>
+              <span>Quality-led approach</span>
+            </div>
+            <div className="hero__assurance">
+              <span className="hero__assurance-mark" aria-hidden="true">✓</span>
+              <span>Patient-focused portfolio</span>
+            </div>
           </div>
         </div>
 
         <div className="hero__visual">
-          <div
-            className={`hero__card hero__card--primary ${
-              primaryLoaded ? 'hero__card--loaded' : ''
-            } ${
-              activeSlide === 0 ? 'hero__card--mobile-active' : ''
-            }`}
-          >
+          <div className="hero__image-frame">
             <img
-              src={heroPrimary}
-              alt="CureVyn healthcare presentation"
+              src={researchHero}
+              alt="Scientist examining a research vial in a modern laboratory"
               loading="eager"
               fetchPriority="high"
               decoding="async"
             />
           </div>
-          <div
-            className={`hero__card hero__card--secondary ${
-              secondaryLoaded ? 'hero__card--loaded' : ''
-            } ${
-              activeSlide === 1 ? 'hero__card--mobile-active' : ''
-            }`}
-          >
-            <img
-              src={heroSecondary}
-              alt="CureVyn pharmaceutical product visual"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
+          <div className="hero__science-note">
+            <span className="hero__science-note-kicker">Our focus</span>
+            <strong>Quality without compromise.</strong>
+            <span>Better healthcare begins with every detail.</span>
           </div>
-          <div className="hero__mobile-dots" aria-hidden="true">
-            <span
-              className={`hero__mobile-dot ${
-                activeSlide === 0 ? 'hero__mobile-dot--active' : ''
-              }`}
-            />
-            <span
-              className={`hero__mobile-dot ${
-                activeSlide === 1 ? 'hero__mobile-dot--active' : ''
-              }`}
-            />
+          <div className="hero__visual-note">
+            <span className="hero__visual-note-line" />
+            <span>Formulated for confidence</span>
           </div>
         </div>
       </div>

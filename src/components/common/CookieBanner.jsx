@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './cookie-banner.css';
 
-const STORAGE_KEY = 'curevyn-cookie-consent-v4';
-const PREFERENCES_KEY = 'curevyn-cookie-preferences-v3';
+const STORAGE_KEY = 'curevyn-cookie-consent-v5';
+const PREFERENCES_KEY = 'curevyn-cookie-preferences-v5';
 const FORCE_SHOW_BANNER = false;
 
 const defaultPreferences = {
@@ -101,50 +101,32 @@ function CookieBanner() {
         aria-live="polite"
         aria-label="Cookie consent"
       >
-        <button
-          className="cookie-banner__close"
-          type="button"
-          aria-label="Close cookie banner"
-          onClick={handleClose}
-        >
-          ×
-        </button>
         <div className="cookie-banner__content">
-          <p className="cookie-banner__title">Cookie Preferences</p>
           <p className="cookie-banner__text">
-            We use cookies on our website to give you the most relevant
-            experience by remembering your preferences and repeat visits. By
-            clicking "Accept", you consent to the use of ALL the cookies.
-            However you may visit Cookie Settings to provide a controlled
-            consent.
+            We use cookies to improve your experience. You can change your choices at any time.
           </p>
-          <div className="cookie-banner__links">
-            <a className="cookie-banner__link" href="/privacy-policy">
-              Read More
-            </a>
+          <div className="cookie-banner__actions">
             <button
               className="cookie-banner__link cookie-banner__link--button"
               type="button"
               onClick={() => setIsSettingsOpen(true)}
             >
-              Cookie settings
+              Manage
             </button>
-            <div className="cookie-banner__actions">
-              <button
-                className="cookie-banner__button cookie-banner__button--secondary"
-                type="button"
-                onClick={handleRejectAll}
-              >
-                REJECT
-              </button>
-              <button
-                className="cookie-banner__button cookie-banner__button--primary"
-                type="button"
-                onClick={handleAcceptAll}
-              >
-                ACCEPT
-              </button>
-            </div>
+            <button
+              className="cookie-banner__button cookie-banner__button--secondary"
+              type="button"
+              onClick={handleRejectAll}
+            >
+              Reject
+            </button>
+            <button
+              className="cookie-banner__button cookie-banner__button--primary"
+              type="button"
+              onClick={handleAcceptAll}
+            >
+              Accept
+            </button>
           </div>
         </div>
       </div>
@@ -158,7 +140,7 @@ function CookieBanner() {
             aria-label="Cookie settings"
           >
             <div className="cookie-banner__settings-head">
-              <h2 className="cookie-banner__settings-title">Privacy Overview</h2>
+              <h2 className="cookie-banner__settings-title">Privacy choices</h2>
               <button
                 className="cookie-banner__settings-close"
                 type="button"
@@ -170,17 +152,9 @@ function CookieBanner() {
             </div>
 
             <p className="cookie-banner__settings-intro">
-              This website uses cookies to improve your experience while you
-              navigate through the website. Out of these, the cookies that are
-              categorized as necessary are stored on your browser as they are
-              essential for the working of basic functionalities of the website.
-              We also use third-party cookies that help us analyze and improve
-              our site when you allow analytics and advertisement cookies.
+              You are in control. Essential cookies help our website function.
+              Optional cookies help us understand and improve the experience.
             </p>
-
-            <button className="cookie-banner__show-more" type="button">
-              Show more
-            </button>
 
             <div className="cookie-banner__setting-list">
               <div className="cookie-banner__setting">
