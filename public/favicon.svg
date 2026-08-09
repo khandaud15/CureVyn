@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#263b42"/>
-  <path fill="none" stroke="#d8c69b" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M45.8 16.2C33.2 16.65 25.6 23.08 25.6 33.3c0 5.82 3.64 10.27 9.65 10.27 7.68 0 11.64-6.04 11.39-13.92-.07-1.92-.33-3.97-.84-6.08ZM27.05 40.43c4.12-6.36 8.91-11.3 17.09-16.2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>CureVyn</title>
+  <circle cx="24" cy="24" r="23" fill="#263b42"/>
+  <path fill="#d8c69b" d="M34.7 10.1C23.1 10.5 16.1 16.4 16.1 25.7c0 5.3 3.3 9.4 8.8 9.4 7 0 10.6-5.5 10.4-12.7-.1-4.3-1.1-8.4-.6-12.3Zm-15.9 20c2.7-5 6.6-9.2 12.2-12.3-4.7 3.8-8.1 7.9-10.8 13.2Z"/>
 </svg>
