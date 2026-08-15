@@ -1,8 +1,42 @@
+import { useEffect } from 'react';
 import { blogPosts } from '../blogData';
 import './blog-article-page.css';
 
 function BlogArticlePage({ post }) {
   const activePost = post ?? blogPosts[0];
+  const isExcludedFromSearch =
+    activePost.slug === 'building-trust-in-modern-healthcare';
+
+  useEffect(() => {
+    if (!isExcludedFromSearch) {
+      return undefined;
+    }
+
+    const selector = 'meta[name="robots"]';
+    const existingMeta = document.head.querySelector(selector);
+    const previousContent = existingMeta?.getAttribute('content');
+    const robotsMeta = existingMeta || document.createElement('meta');
+
+    if (!existingMeta) {
+      robotsMeta.setAttribute('name', 'robots');
+      document.head.appendChild(robotsMeta);
+    }
+
+    robotsMeta.setAttribute('content', 'noindex, follow');
+
+    return () => {
+      if (!existingMeta) {
+        robotsMeta.remove();
+        return;
+      }
+
+      if (previousContent === null) {
+        robotsMeta.removeAttribute('content');
+      } else {
+        robotsMeta.setAttribute('content', previousContent);
+      }
+    };
+  }, [isExcludedFromSearch]);
 
   return (
     <main className="blog-article-page">
